@@ -8,7 +8,8 @@
 import Foundation
 
 class QuakeClient {
-
+    private let quakeCache: NSCache<NSString, CacheEntryObject> = NSCache()
+    
     var quakes: [Quake] {
         get async throws {
             let data = try await downloader.httpData(from: feedURL)
