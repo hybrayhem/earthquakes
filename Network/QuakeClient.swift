@@ -14,7 +14,11 @@ actor QuakeClient { // Making QuakeClient an actor protects the cache from simul
         get async throws {
             let data = try await downloader.httpData(from: feedURL)
             let allQuakes = try decoder.decode(GeoJSON.self, from: data)
-            return allQuakes.quakes
+            
+            var updatedQuakes = allQuakes.quakes
+            try await updateQuakeLocations(&updatedQuakes, allQuakes)
+            
+            return updatedQuakes
         }
     }
 
@@ -64,6 +68,36 @@ actor QuakeClient { // Making QuakeClient an actor protects the cache from simul
             // remove task from cache
             quakeCache[url] = nil
             throw error
+        }
+    }
+    
+    func updateQuakeLocations(_ updatedQuakes: inout [Quake], _ allQuakes: GeoJSON) async throws {
+        let olderThanOneHour = updatedQuakes.firstIndex(where: {  $0.time.timeIntervalSinceNow > 3600 })
+        
+        if let olderThanOneHour {
+            let indexRange = updatedQuakes.startIndex..<olderThanOneHour
+            
+            try await withThrowingTaskGroup(of: (Int, QuakeLocation).self) { group in
+                
+                for index in indexRange {
+                    group.addTask {
+                        // Part which will be executed
+                        let location = try await self.quakeLocation(from: allQuakes.quakes[index].detail)
+                        return (index, location)
+                    }
+                }
+                
+                while let result = await group.nextResult() {
+                    // Evaulation of results
+                    switch result {
+                    case .failure(let error):
+                        throw error
+                    case .success(let (index, location)):
+                        updatedQuakes[index].location = location
+                    }
+                }
+                
+            }
         }
     }
 }
