@@ -1,0 +1,168 @@
+{
+  "type": "Feature",
+  "properties": {
+    "mag": 2.25999999,
+    "place": "4 km ENE of Pahala, Hawaii",
+    "time": 1636129061070,
+    "updated": 1636129255400,
+    "tz": null,
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv72783692",
+    "felt": null,
+    "cdi": null,
+    "mmi": null,
+    "alert": null,
+    "status": "automatic",
+    "tsunami": 0,
+    "sig": 79,
+    "net": "hv",
+    "code": "72783692",
+    "ids": ",hv72783692,",
+    "sources": ",hv,",
+    "types": ",origin,phase-data,",
+    "nst": 42,
+    "dmin": null,
+    "rms": 0.119999997,
+    "gap": 127,
+    "magType": "md",
+    "type": "earthquake",
+    "title": "M 2.3 - 4 km ENE of Pahala, Hawaii",
+    "products": {
+      "origin": [
+        {
+          "indexid": "834411",
+          "indexTime": 1636129256903,
+          "id": "urn:usgs-product:hv:origin:hv72783692:1636129255400",
+          "type": "origin",
+          "code": "hv72783692",
+          "source": "hv",
+          "updateTime": 1636129255400,
+          "status": "UPDATE",
+          "properties": {
+            "azimuthal-gap": "127",
+            "depth": "34.8699989318848",
+            "depth-type": "from location",
+            "error-ellipse-azimuth": "339",
+            "error-ellipse-intermediate": "1728.0000696",
+            "error-ellipse-major": "2015.9999376",
+            "error-ellipse-minor": "864.0000336",
+            "error-ellipse-plunge": "71",
+            "error-ellipse-rotation": "0",
+            "evaluation-status": "preliminary",
+            "event-type": "earthquake",
+            "eventParametersPublicID": "quakeml:hv.anss.org/Event/HV/72783692#163612925540",
+            "eventsource": "hv",
+            "eventsourcecode": "72783692",
+            "eventtime": "2021-11-05T16:17:41.070Z",
+            "horizontal-error": "0.68",
+            "latitude": "19.2189998626709",
+            "longitude": "-155.434173583984",
+            "magnitude": "2.25999999",
+            "magnitude-error": "0.839999974",
+            "magnitude-num-stations-used": "24",
+            "magnitude-source": "HV",
+            "magnitude-type": "md",
+            "num-phases-used": "52",
+            "num-stations-used": "42",
+            "origin-source": "HV",
+            "pdl-client-version": "Version 2.4.0 2020-05-11",
+            "quakeml-magnitude-publicid": "quakeml:hv.anss.org/Netmag/HV/95279212",
+            "quakeml-origin-publicid": "quakeml:hv.anss.org/Origin/HV/75783687",
+            "quakeml-publicid": "quakeml:hv.anss.org/Event/HV/72783692",
+            "review-status": "automatic",
+            "standard-error": "0.119999997",
+            "title": "4 km ENE of Pahala, Hawaii",
+            "version": "0",
+            "vertical-error": "0.790000021"
+          },
+          "preferredWeight": 157,
+          "contents": {
+            "contents.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1636129255000,
+              "length": 195,
+              "url": "https://earthquake.usgs.gov/realtime/product/origin/hv72783692/hv/1636129255400/contents.xml"
+            },
+            "quakeml.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1636129255000,
+              "length": 2966,
+              "url": "https://earthquake.usgs.gov/realtime/product/origin/hv72783692/hv/1636129255400/quakeml.xml"
+            }
+          }
+        }
+      ],
+      "phase-data": [
+        {
+          "indexid": "834412",
+          "indexTime": 1636129257794,
+          "id": "urn:usgs-product:hv:phase-data:hv72783692:1636129255400",
+          "type": "phase-data",
+          "code": "hv72783692",
+          "source": "hv",
+          "updateTime": 1636129255400,
+          "status": "UPDATE",
+          "properties": {
+            "azimuthal-gap": "127",
+            "depth": "34.8699989318848",
+            "depth-type": "from location",
+            "error-ellipse-azimuth": "339",
+            "error-ellipse-intermediate": "1728.0000696",
+            "error-ellipse-major": "2015.9999376",
+            "error-ellipse-minor": "864.0000336",
+            "error-ellipse-plunge": "71",
+            "error-ellipse-rotation": "0",
+            "evaluation-status": "preliminary",
+            "event-type": "earthquake",
+            "eventParametersPublicID": "quakeml:hv.anss.org/Event/HV/72783692#163612925540",
+            "eventsource": "hv",
+            "eventsourcecode": "72783692",
+            "eventtime": "2021-11-05T16:17:41.070Z",
+            "horizontal-error": "0.68",
+            "latitude": "19.2189998626709",
+            "longitude": "-155.434173583984",
+            "magnitude": "2.25999999",
+            "magnitude-error": "0.839999974",
+            "magnitude-num-stations-used": "24",
+            "magnitude-source": "HV",
+            "magnitude-type": "md",
+            "num-phases-used": "52",
+            "num-stations-used": "42",
+            "origin-source": "HV",
+            "pdl-client-version": "Version 2.4.0 2020-05-11",
+            "quakeml-magnitude-publicid": "quakeml:hv.anss.org/Netmag/HV/95279212",
+            "quakeml-origin-publicid": "quakeml:hv.anss.org/Origin/HV/75783687",
+            "quakeml-publicid": "quakeml:hv.anss.org/Event/HV/72783692",
+            "review-status": "automatic",
+            "standard-error": "0.119999997",
+            "version": "0",
+            "vertical-error": "0.790000021"
+          },
+          "preferredWeight": 157,
+          "contents": {
+            "contents.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1636129255000,
+              "length": 195,
+              "url": "https://earthquake.usgs.gov/realtime/product/phase-data/hv72783692/hv/1636129255400/contents.xml"
+            },
+            "quakeml.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1636129255000,
+              "length": 106487,
+              "url": "https://earthquake.usgs.gov/realtime/product/phase-data/hv72783692/hv/1636129255400/quakeml.xml"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -155.434173583984,
+      19.2189998626709,
+      34.8699989318848
+    ]
+  },
+  "id": "hv72783692"
+}
