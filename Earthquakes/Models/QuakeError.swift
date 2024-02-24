@@ -10,7 +10,7 @@ import Foundation
 enum QuakeError: Error {
     case missingData
     case networkError
-    case unexpectedError(Error)
+    case unexpectedError(error: Error)
 }
 
 extension QuakeError: LocalizedError {
