@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD43F1E126158A640068AABC"
                BuildableName = "Earthquakes.app"
-               BlueprintName = "Earthquakes-iOS"
+               BlueprintName = "Earthquakes"
                ReferencedContainer = "container:Earthquakes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,7 +58,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD43F1E126158A640068AABC"
             BuildableName = "Earthquakes.app"
-            BlueprintName = "Earthquakes-iOS"
+            BlueprintName = "Earthquakes"
             ReferencedContainer = "container:Earthquakes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -92,7 +92,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD43F1E126158A640068AABC"
             BuildableName = "Earthquakes.app"
-            BlueprintName = "Earthquakes-iOS"
+            BlueprintName = "Earthquakes"
             ReferencedContainer = "container:Earthquakes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

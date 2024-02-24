@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5508BDB52B8A01F8009A2858 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5508BDB42B8A01F8009A2858 /* .gitignore */; };
+		5508BDB72B8A0BBC009A2858 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5508BDB62B8A0BBC009A2858 /* QuakeError.swift */; };
 		7CC62565273C2A9200F87758 /* Quake+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC62564273C2A9200F87758 /* Quake+Color.swift */; };
 		AA2F4EB4276BACEC009837CD /* QuakeMagnitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4EB3276BACEC009837CD /* QuakeMagnitude.swift */; };
 		AA988DD327E900B6004EA073 /* Quakes+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA988DD227E900B6004EA073 /* Quakes+Toolbar.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		5508BDB42B8A01F8009A2858 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5508BDB62B8A0BBC009A2858 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
 		7CC62564273C2A9200F87758 /* Quake+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+Color.swift"; sourceTree = "<group>"; };
 		AA2F4EB3276BACEC009837CD /* QuakeMagnitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuakeMagnitude.swift; path = Earthquakes/Views/QuakeMagnitude.swift; sourceTree = SOURCE_ROOT; };
 		AA988DD227E900B6004EA073 /* Quakes+Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quakes+Toolbar.swift"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				AD43F1F826158CD50068AABC /* Quake.swift */,
+				5508BDB62B8A0BBC009A2858 /* QuakeError.swift */,
 				7CC62564273C2A9200F87758 /* Quake+Color.swift */,
 			);
 			name = Models;
@@ -131,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD43F1E126158A640068AABC /* Earthquakes-iOS */ = {
+		AD43F1E126158A640068AABC /* Earthquakes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD43F1F526158A660068AABC /* Build configuration list for PBXNativeTarget "Earthquakes-iOS" */;
+			buildConfigurationList = AD43F1F526158A660068AABC /* Build configuration list for PBXNativeTarget "Earthquakes" */;
 			buildPhases = (
 				AD43F1DE26158A640068AABC /* Sources */,
 				AD43F1DF26158A640068AABC /* Frameworks */,
@@ -143,7 +146,7 @@
 			);
 			dependencies = (
 			);
-			name = "Earthquakes-iOS";
+			name = Earthquakes;
 			productName = Earthquakes;
 			productReference = AD43F1E226158A640068AABC /* Earthquakes.app */;
 			productType = "com.apple.product-type.application";
@@ -178,7 +181,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD43F1E126158A640068AABC /* Earthquakes-iOS */,
+				AD43F1E126158A640068AABC /* Earthquakes */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +213,7 @@
 				AA988DDB27E9028A004EA073 /* ToolbarStatus.swift in Sources */,
 				AA988DD327E900B6004EA073 /* Quakes+Toolbar.swift in Sources */,
 				AA988DDD27E9030A004EA073 /* DeleteButton.swift in Sources */,
+				5508BDB72B8A0BBC009A2858 /* QuakeError.swift in Sources */,
 				AA988DD927E901B0004EA073 /* RefreshButton.swift in Sources */,
 				AD57B10226561FE1005183D0 /* Quakes.swift in Sources */,
 				AD43F1FA26158CD50068AABC /* Quake.swift in Sources */,
@@ -419,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD43F1F526158A660068AABC /* Build configuration list for PBXNativeTarget "Earthquakes-iOS" */ = {
+		AD43F1F526158A660068AABC /* Build configuration list for PBXNativeTarget "Earthquakes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD43F1F626158A660068AABC /* Debug */,
