@@ -21,14 +21,39 @@ struct Quakes: View {
     
     var body: some View {
         NavigationView {
-            List(selection: $selection) {
-                ForEach(provider.quakes) { quake in
-                    NavigationLink(destination: QuakeDetail(quake: quake)) {
-                        QuakeRow(quake: quake)
-                    }
-                }
-                .onDelete(perform: deleteQuakes)
+            applyQuakeListModifiers(to: quakeList)
+        }
+        .task {
+            await fetchQuakes()
+        }
+    }
+    
+    @ViewBuilder
+    var quakeRows: some View {
+        ForEach(provider.quakes) { quake in
+            NavigationLink(destination: QuakeDetail(quake: quake)) {
+                QuakeRow(quake: quake)
             }
+        }
+        .onDelete(perform: deleteQuakes)
+    }
+    
+    @ViewBuilder
+    var quakeList: some View {
+        // To fix selection glitch
+//        if editMode == .inactive {
+//            List {
+//                quakeRows
+//            }
+//        } else {
+            List(selection: $selection) {
+                quakeRows
+            }
+//        }
+    }
+    
+    func applyQuakeListModifiers<V: View>(to view: V) -> some View {
+        view
             .listStyle(.inset)
             .navigationTitle(title)
             .toolbar(content: toolbarContent)
@@ -37,16 +62,12 @@ struct Quakes: View {
                 await fetchQuakes()
             }
             .alert(isPresented: $hasError, error: error) {}
-        }
-        .task {
-            await fetchQuakes()
-        }
     }
 }
 
 extension Quakes {
     var title: String {
-        if selectMode.isActive || selection.isEmpty {
+        if !editMode.isEditing || selectMode.isActive || selection.isEmpty {
             return "Earthquakes"
         } else {
             return "\(selection.count) Selected"
