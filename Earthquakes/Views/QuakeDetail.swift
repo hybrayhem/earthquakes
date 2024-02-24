@@ -10,7 +10,7 @@ import SwiftUI
 struct QuakeDetail: View {
     var quake: Quake
     
-    @State var fractionLimit: Bool = true
+    @State var limitFraction: Bool = true
     
     var body: some View {
         VStack {
@@ -28,18 +28,18 @@ struct QuakeDetail: View {
                     Text("Latitude: \(latitudeText(location))")
                     Text("Longitude: \(longitudeText(location))")
                 }.onTapGesture {
-                    fractionLimit.toggle()
+                    limitFraction.toggle()
                 }
             }
         }
     }
     
     private func latitudeText(_ location: QuakeLocation) -> String {
-        return fractionLimit ? fraction3(location.latitude) : String(location.latitude)
+        return limitFraction ? fraction3(location.latitude) : String(location.latitude)
     }
     
     private func longitudeText(_ location: QuakeLocation) -> String {
-        return fractionLimit ? fraction3(location.longitude) : String(location.longitude)
+        return limitFraction ? fraction3(location.longitude) : String(location.longitude)
     }
     
     private func fraction3(_ number: Double) -> String {
