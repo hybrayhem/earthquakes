@@ -1,6 +1,6 @@
 //
 //  QuakeLocation.swift
-//  EarthquakesTests
+//  Earthquakes
 //
 //  Created by hybrayhem.
 //

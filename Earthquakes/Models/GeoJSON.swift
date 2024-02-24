@@ -1,6 +1,6 @@
 //
 //  GeoJSON.swift
-//  EarthquakesTests
+//  Earthquakes
 //
 //  Created by hybrayhem.
 //
