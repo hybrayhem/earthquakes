@@ -31,4 +31,10 @@ class QuakeClient {
     init(downloader: any HTTPDataDownloader = URLSession.shared) {
         self.downloader = downloader
     }
+    
+    func quakeLocation(from url: URL) async throws -> QuakeLocation {
+        let data = try await downloader.httpData(from: url)
+        let location = try decoder.decode(QuakeLocation.self, from: data)
+        return location
+    }
 }
