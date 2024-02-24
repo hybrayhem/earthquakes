@@ -9,7 +9,9 @@ import SwiftUI
 
 struct QuakeDetail: View {
     var quake: Quake
-    
+    @EnvironmentObject private var quakesProvider: QuakesProvider
+    @State private var location: QuakeLocation? = nil
+
     @State var limitFraction: Bool = true
     
     var body: some View {
@@ -29,6 +31,15 @@ struct QuakeDetail: View {
                     Text("Longitude: \(longitudeText(location))")
                 }.onTapGesture {
                     limitFraction.toggle()
+                }
+            }
+        }
+        .task {
+            if self.location == nil {
+                if let quakeLocation = quake.location {
+                    self.location = quakeLocation
+                } else {
+                    self.location = try? await quakesProvider.location(for: quake)
                 }
             }
         }

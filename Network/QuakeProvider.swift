@@ -22,6 +22,10 @@ class QuakesProvider: ObservableObject {
     func deleteQuakes(atOffsets offsets: IndexSet) {
         quakes.remove(atOffsets: offsets)
     }
+    
+    func location(for quake: Quake) async throws -> QuakeLocation {
+        return try await client.quakeLocation(from: quake.detail)
+    }
 
     init(client: QuakeClient = QuakeClient()) {
         self.client = client
