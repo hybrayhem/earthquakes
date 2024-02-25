@@ -32,7 +32,7 @@ extension Quakes {
         ToolbarItemGroup(placement: .bottomBar) {
             RefreshButton {
                 Task {
-                    await fetchQuakes()
+                    await updateQuakes()
                 }
             }
             Spacer()

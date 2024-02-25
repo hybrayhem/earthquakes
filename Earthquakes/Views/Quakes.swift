@@ -12,6 +12,7 @@ struct Quakes: View {
     var lastUpdated = Date.distantFuture.timeIntervalSince1970
     
     @EnvironmentObject var provider: QuakesProvider
+    
     @State var editMode: EditMode = .inactive
     @State var selectMode: SelectMode = .inactive
     @State var isLoading = false
@@ -87,7 +88,7 @@ extension Quakes {
         deleteQuakes(at: offsetsToDelete)
         selection.removeAll()
     }
-    func fetchQuakes() async {
+    func updateQuakes() async {
         isLoading = true
         do {
             try await provider.fetchQuakes()
@@ -97,6 +98,15 @@ extension Quakes {
             self.hasError = true
         }
         isLoading = false
+    }
+    
+    func fetchQuakes() async {
+        do {
+            try await provider.fetchQuakes()
+        } catch {
+            self.error = QuakeError.missingData
+            hasError = true
+        }
     }
 }
 
