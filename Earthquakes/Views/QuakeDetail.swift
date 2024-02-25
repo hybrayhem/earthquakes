@@ -30,7 +30,7 @@ struct QuakeDetail: View {
             Text("\(quake.time.formatted())")
                 .foregroundStyle(Color.secondary)
             
-            if let location = quake.location {
+            if let location = self.location {
                 Group {
                     Text("Latitude: \(latitudeText(location))")
                     Text("Longitude: \(longitudeText(location))")
